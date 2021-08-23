@@ -43,7 +43,7 @@ void setup() {
 void loop() {
 
 
-  receptor = Serial.read();
+  receptor = bluetooth.read();
   //Serial.println(digitalRead(infravermelho));
   Serial.println(receptor);
   
