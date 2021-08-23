@@ -5,13 +5,9 @@
 AF_DCMotor motorE(1, MOTOR12_64KHZ); ///  motorE
 AF_DCMotor motorD(2, MOTOR12_64KHZ); ///  motorDireita
 
-//// COMANDO QUE DEFINE AS PORTAS NO ARDUINO, NOME DAS PORTAS
+//// COMANDO QUE DEFINE AS PORTAS DO BLUETOOTH
 
-/*
-  #define TX  19
-  #define RX  18
-*/
-SoftwareSerial bluetooth(19,18);
+SoftwareSerial bluetooth(19,18); // TX, RX
 
 //// DEFINE DO INFRAVERMELHO, QUE DETECTA A PESA
 
@@ -20,14 +16,12 @@ SoftwareSerial bluetooth(19,18);
 //// DEFINE DOS SEGUIDORES DE LINHA NPN
 
 #define esquerda 37
-#define centro 30
 #define direita 35
-
 
 
 //// variaveis
 
-int input_infra = 1, indo;
+int input_infra,indo=0;
 char receptor;
 
 void setup() {
